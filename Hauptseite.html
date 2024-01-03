@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hauptseite2</title>
+
+
+
+    <style>
+
+        body{
+            margin: 0;
+            padding: 0;
+            background-image: url("images/hauptbild.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            width: 100vw;
+
+            display: flex;
+            justify-content: center;
+
+        }
+
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        .ballons{
+            height: 60px;
+            width: 55px;
+            background-color: crimson;
+            position: absolute;
+            top: 40%;
+            left: 10%;
+            border-radius: 50%;
+            animation: move 2s ease-in infinite;
+        }
+
+        .ballons:before{
+            content: "";
+            height: 60px;
+            width: 6px;
+            position: absolute;
+            background-color: white;
+            top: 93%;
+            left: 40%;
+        }
+
+        .ballons::after{
+            position: absolute;
+            content: '';
+            border-bottom: 12px solid crimson;
+            border-left: 10px solid transparent;
+            border-right: 10px  solid transparent;
+            top: 88%;
+            left: 28%;
+        }
+
+        @keyframes move {
+            0%{
+                top: 100%;
+            }
+            100%{
+                top: 0%;
+            }
+        }
+
+        .ballons:nth-child(2){
+            left: 20%;
+            top: 40%;
+            background-color: yellow;
+            animation-duration: 3s;
+        }
+
+        .ballons:nth-child(2)::after{
+            position: absolute;
+            content: '';
+            border-bottom: 12px solid yellow;
+            border-left: 10px solid transparent;
+            border-right: 10px  solid transparent;
+            top: 88%;
+            left: 28%;
+        }
+
+        .ballons:nth-child(3){
+            left: 30%;
+            top: 40%;
+            background-color: violet;
+            animation-duration: 4s;
+        }
+
+        .ballons:nth-child(3)::after{
+            position: absolute;
+            content: '';
+            border-bottom: 12px solid violet;
+            border-left: 10px solid transparent;
+            border-right: 10px  solid transparent;
+            top: 88%;
+            left: 28%;
+        }
+
+        .ballons:nth-child(4){
+            left: 40%;
+            top: 40%;
+            background-color: crimson;
+            animation-duration: 5s;
+        }
+
+        .ballons:nth-child(4)::after{
+            position: absolute;
+            content: '';
+            border-bottom: 12px solid crimson;
+            border-left: 10px solid transparent;
+            border-right: 10px  solid transparent;
+            top: 88%;
+            left: 28%;
+        }
+
+        .ballons:nth-child(5){
+            left: 50%;
+            top: 40%;
+            background-color: pink;
+            animation-duration: 6s;
+        }
+
+        .ballons:nth-child(5)::after{
+            position: absolute;
+            content: '';
+            border-bottom: 12px solid pink;
+            border-left: 10px solid transparent;
+            border-right: 10px  solid transparent;
+            top: 88%;
+            left: 28%;
+        }
+
+        .ballons:nth-child(6){
+            left: 60%;
+            top: 40%;
+            background-color: orange;
+            animation-duration: 2s;
+        }
+
+        .ballons:nth-child(6)::after{
+            position: absolute;
+            content: '';
+            border-bottom: 12px solid orange;
+            border-left: 10px solid transparent;
+            border-right: 10px  solid transparent;
+            top: 88%;
+            left: 28%;
+        }
+
+        .ballons:nth-child(7){
+            left: 70%;
+            top: 40%;
+            background-color: yellow;
+            animation-duration: 7s;
+        }
+
+        .ballons:nth-child(7)::after{
+            position: absolute;
+            content: '';
+            border-bottom: 12px solid yellow;
+            border-left: 10px solid transparent;
+            border-right: 10px  solid transparent;
+            top: 88%;
+            left: 28%;
+        }
+
+        .ballons:nth-child(8){
+            left: 80%;
+            top: 40%;
+            background-color: blue;
+            animation-duration: 3s;
+        }
+
+        .ballons:nth-child(8)::after{
+            position: absolute;
+            content: '';
+            border-bottom: 12px solid blue;
+            border-left: 10px solid transparent;
+            border-right: 10px  solid transparent;
+            top: 88%;
+            left: 28%;
+        }
+
+        .ballons:nth-child(9){
+            left: 90%;
+            top: 40%;
+            background-color: crimson;
+            animation-duration: 4s;
+        }
+
+        .ballons:nth-child(9)::after{
+            position: absolute;
+            content: '';
+            border-bottom: 12px solid crimson;
+            border-left: 10px solid transparent;
+            border-right: 10px  solid transparent;
+            top: 88%;
+            left: 28%;
+        }
+
+        .fancy-button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 150%;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            background-color: #3498db;
+            transition: background-color 0.3s ease;
+            position: absolute;
+            margin-top: 320px;
+            transition: opacity 0.5s ease;
+        }
+
+        /* Stil für den Button, wenn der Mauszeiger darüber schwebt */
+        .fancy-button:hover {
+            background-color: #2980b9;
+        }
+
+        #linkende{
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: orange; /* Hintergrundfarbe ändern */
+            color: white; /* Textfarbe ändern */
+            text-decoration: none;
+            font-size: 20px; /* Schriftgröße ändern */
+            border-radius: 5px; /* Abgerundete Ecken hinzufügen */
+            transition: background-color 0.3s ease; /* Fließende Übergänge hinzufügen */
+            position: absolute;
+            margin-top: 600px;
+            font-family: Franklin Gothic Heavy;
+            font-size: 150%;
+
+        }
+
+    </style>
+
+    <script>
+        function buttonClick() {
+            // Den Button langsam ausblenden (Fade-Out)
+            var button = document.querySelector('.fancy-button');
+            button.style.opacity = '0';
+
+            // Nach der Animation den Button aus dem DOM entfernen
+            setTimeout(function () {
+                button.style.display = 'none';
+
+                // iframe erstellen und einfügen
+                var iframe = document.createElement('iframe');
+                iframe.src = "images/Talking2_Photo.mp4"; // Setzen Sie die gewünschte URL
+                iframe.width = '500'; // Setzen Sie die gewünschte Breite
+                iframe.height = '500'; // Setzen Sie die gewünschte Höhe
+                document.body.appendChild(iframe);
+            }, 500); // 500 Millisekunden (Dauer der Animation)
+
+            // Hier können Sie weitere Aktionen ausführen, wenn der Button geklickt wird
+        }
+    </script>
+</head>
+<body>
+
+<div class="ballons"> </div>
+<div class="ballons"> </div>
+<div class="ballons"> </div>
+<div class="ballons"> </div>
+<div class="ballons"> </div>
+<div class="ballons"> </div>
+<div class="ballons"> </div>
+<div class="ballons"> </div>
+<div class="ballons"> </div>
+
+<button class="fancy-button" onclick="buttonClick()">Klikni prvo ovde</button>
+
+<a id="linkende" href="karte.html">klikni sada ovde</a>
+
+
+</body>
+</html>
+

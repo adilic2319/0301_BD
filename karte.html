@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><!DOCTYPE html>
+        <html lang="de">
+        <head>
+        <meta charset="UTF-8">
+        <title>Hauptseite</title>
+</head>
+
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+    }
+
+    #schriftartnur{
+        font-size: 30px;
+        margin-top: 9px;
+        color: #00ced1;
+    }
+
+    body{
+        margin: 0;
+        padding: 0;
+        background-image: url("images/hauptbild.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh;
+        width: 100vw;
+
+        display: flex;
+        justify-content: center;
+
+    }
+
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+    }
+
+    .ballons{
+        height: 60px;
+        width: 55px;
+        background-color: crimson;
+        position: absolute;
+        top: 40%;
+        left: 10%;
+        border-radius: 50%;
+        animation: move 2s ease-in infinite;
+    }
+
+    .ballons:before{
+        content: "";
+        height: 60px;
+        width: 6px;
+        position: absolute;
+        background-color: white;
+        top: 93%;
+        left: 40%;
+    }
+
+    .ballons::after{
+        position: absolute;
+        content: '';
+        border-bottom: 12px solid crimson;
+        border-left: 10px solid transparent;
+        border-right: 10px  solid transparent;
+        top: 88%;
+        left: 28%;
+    }
+
+    @keyframes move {
+        0%{
+            top: 100%;
+        }
+        100%{
+            top: 0%;
+        }
+    }
+
+    .ballons:nth-child(2){
+        left: 20%;
+        top: 40%;
+        background-color: yellow;
+        animation-duration: 3s;
+    }
+
+    .ballons:nth-child(2)::after{
+        position: absolute;
+        content: '';
+        border-bottom: 12px solid yellow;
+        border-left: 10px solid transparent;
+        border-right: 10px  solid transparent;
+        top: 88%;
+        left: 28%;
+    }
+
+    .ballons:nth-child(3){
+        left: 30%;
+        top: 40%;
+        background-color: violet;
+        animation-duration: 4s;
+    }
+
+    .ballons:nth-child(3)::after{
+        position: absolute;
+        content: '';
+        border-bottom: 12px solid violet;
+        border-left: 10px solid transparent;
+        border-right: 10px  solid transparent;
+        top: 88%;
+        left: 28%;
+    }
+
+    .ballons:nth-child(4){
+        left: 40%;
+        top: 40%;
+        background-color: crimson;
+        animation-duration: 5s;
+    }
+
+    .ballons:nth-child(4)::after{
+        position: absolute;
+        content: '';
+        border-bottom: 12px solid crimson;
+        border-left: 10px solid transparent;
+        border-right: 10px  solid transparent;
+        top: 88%;
+        left: 28%;
+    }
+
+    .ballons:nth-child(5){
+        left: 50%;
+        top: 40%;
+        background-color: pink;
+        animation-duration: 6s;
+    }
+
+    .ballons:nth-child(5)::after{
+        position: absolute;
+        content: '';
+        border-bottom: 12px solid pink;
+        border-left: 10px solid transparent;
+        border-right: 10px  solid transparent;
+        top: 88%;
+        left: 28%;
+    }
+
+    .ballons:nth-child(6){
+        left: 60%;
+        top: 40%;
+        background-color: orange;
+        animation-duration: 2s;
+    }
+
+    .ballons:nth-child(6)::after{
+        position: absolute;
+        content: '';
+        border-bottom: 12px solid orange;
+        border-left: 10px solid transparent;
+        border-right: 10px  solid transparent;
+        top: 88%;
+        left: 28%;
+    }
+
+    .ballons:nth-child(7){
+        left: 70%;
+        top: 40%;
+        background-color: yellow;
+        animation-duration: 7s;
+    }
+
+    .ballons:nth-child(7)::after{
+        position: absolute;
+        content: '';
+        border-bottom: 12px solid yellow;
+        border-left: 10px solid transparent;
+        border-right: 10px  solid transparent;
+        top: 88%;
+        left: 28%;
+    }
+
+    .ballons:nth-child(8){
+        left: 80%;
+        top: 40%;
+        background-color: blue;
+        animation-duration: 3s;
+    }
+
+    .ballons:nth-child(8)::after{
+        position: absolute;
+        content: '';
+        border-bottom: 12px solid blue;
+        border-left: 10px solid transparent;
+        border-right: 10px  solid transparent;
+        top: 88%;
+        left: 28%;
+    }
+
+    .ballons:nth-child(9){
+        left: 90%;
+        top: 40%;
+        background-color: crimson;
+        animation-duration: 4s;
+    }
+
+    .ballons:nth-child(9)::after{
+        position: absolute;
+        content: '';
+        border-bottom: 12px solid crimson;
+        border-left: 10px solid transparent;
+        border-right: 10px  solid transparent;
+        top: 88%;
+        left: 28%;
+    }
+
+
+    .card{
+        width: 640px;
+        height: 400px;
+        position: absolute;
+        margin: auto;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        -webkit-perspective: 1200px;
+        perspective: 1200px;
+        transition: 6s;
+    }
+
+    .card:hover{
+        transform: rotate(-5deg);
+    }
+
+    .card:hover .outside{
+        transform: rotateY(-130deg);
+
+
+    }
+
+    .outside,
+    .inside{
+        height: 100%;
+        width: 50%;
+        position: absolute;
+        left: 50.1%;
+    }
+
+    .inside{
+        background: linear-gradient(to right, #e0e0e0, white 30%);
+        line-height: 3px;
+        padding: 0 20px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        left: 50%;
+    }
+
+    .outside{
+        -webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+        z-index: 1;
+        transform-origin: left;
+        transition: 3s;
+
+
+
+    }
+
+    .front,
+    .back{
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        transform: rotate(0deg);
+    }
+
+    .front{
+        background-color: white;
+    }
+
+    .back{
+        transform: rotateY(180deg);
+        background: linear-gradient(to left, #e0e0e0, white 30%);
+    }
+
+    .cake{
+        width: 100%;
+        position: relative;
+        bottom: -8px;
+    }
+
+    .top-layer,
+    .middle-layer,
+    .bottom-layer{
+        height: 80px;
+        width: 240px;
+        background-repeat: repeat;
+        background-size: 60px 100px;
+        background-position: 28px 0;
+        background-image: linear-gradient(
+                transparent 50px,
+                #a498e0 50px,
+                #fcbf29 60px
+        ),
+        radial-gradient(circle at 30px 5px, #5b3a29
+                30px, #a498e0 31px);
+        border-radius: 10px 10px 0 0;
+        position: relative;
+        margin: auto;
+    }
+
+    .middle-layer{
+        transform: scale(0.85);
+        top: 6px;
+    }
+
+    .top-layer{
+        transform: scale(0.7);
+        top: 26px;
+    }
+
+    .candle{
+        height: 37px;
+        width: 14px;
+        background: repeating-linear-gradient(
+                45deg,
+                #fd3018 0,
+                #fd3018 5px,
+                #ffa89e 5px,
+                #ffa89e 10px
+        );
+        position: absolute;
+        left: -5%;
+        right: 0;
+        bottom: 202px;
+        margin: auto;
+    }
+
+    .candle:before{
+        content: "";
+        position: absolute;
+        height: 16px;
+        width: 16px;
+        background-color: #ffa500;
+        border-radius: 0 50% 50% 50%;
+        bottom: 39px;
+        transform: rotate(45deg);
+        left: -1px;
+    }
+
+
+
+    .candle2{
+        height: 37px;
+        width: 14px;
+        background: repeating-linear-gradient(
+                45deg,
+                #fd3018 0,
+                #fd3018 5px,
+                #ffa89e 5px,
+                #ffa89e 10px
+        );
+        position: absolute;
+        left: 0;
+        right: -9%;
+        bottom: 202px;
+        margin: auto;
+
+    }
+
+
+    .candle2:before{
+        content: "";
+        position: absolute;
+        height: 16px;
+        width: 16px;
+        background-color: #ffa500;
+        border-radius: 0 50% 50% 50%;
+        bottom: 39px;
+        transform: rotate(45deg);
+        left: -1px;
+    }
+
+
+
+
+
+    .outside p{
+        font-size: 33px;
+        margin-top: 10px;
+        text-align: center;
+        color: #006262;
+    }
+
+    .outside h1{
+        font-size: 180px;
+        line-height: 120px;
+        margin-left: 45px;
+        margin-top: 75px;
+    }
+
+    #zahl {
+        margin-top: -34px;
+        margin-left: -4px;
+        font-family: "Franklin Gothic Heavy";
+        color: #00B6D3;
+        font-size: 30px;
+    }
+
+    #zahl2{
+        margin-top: -34px;
+        margin-left: -4px;
+        font-family: "Franklin Gothic Heavy";
+        color: #00B6D3;
+        font-size: 30px;
+    }
+
+    #klick{
+        margin-bottom:  -5px;
+    }
+
+
+</style>
+<body>
+
+<div class="ballons"> </div>
+<div class="ballons"> </div>
+<div class="ballons"> </div>
+<div class="ballons"> </div>
+<div class="ballons"> </div>
+<div class="ballons"> </div>
+<div class="ballons"> </div>
+<div class="ballons"> </div>
+<div class="ballons"> </div>
+
+
+<div class="card">
+    <div class="outside">
+        <div class="front">
+            <p>Happy</p>
+            <p>Birthday</p>
+            <h1>&#127873;</h1>
+        </div>
+        <div class="back"></div>
+    </div>
+    <div class="inside">
+        <p id="schriftartnur">Sretan ti Rodjendan</p>
+
+
+        <div class="cake">
+            <div class="top-layer"></div>
+            <div class="middle-layer"></div>
+            <div class="bottom-layer"></div>
+            <div class="candle">
+                <p id="zahl">5</p>
+            </div>
+            <div class="candle2">
+                <p id="zahl2">6</p>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+</body>
+</html>
+
+</title>
+</head>
+<body>
+
+</body>
+</html>

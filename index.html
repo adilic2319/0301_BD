@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hauptseite</title>
+</head>
+
+<script>
+    function validateForm() {
+        var vorname = document.getElementById("vorname").value.toLowerCase();
+        var nachname = document.getElementById("nachname").value.toLowerCase();
+        var geburtsdatum = document.getElementById("geburtsdatum").value;
+
+        // Überprüfung des Vornamens
+        if (vorname !== "hasija") {
+            alert("Ime pogresno");
+            return false;
+        }
+
+        // Überprüfung des Vornamens
+        if (nachname !== "dilic") {
+            alert("Prezime pogresno");
+            return false;
+        }
+
+        // Überprüfung des Geburtsdatums
+        var allowedDate = new Date("1968-01-03");
+        var inputDate = new Date(geburtsdatum);
+
+        if (inputDate.getTime() !== allowedDate.getTime()) {
+            alert("Datum rodjenja pogresno");
+            return false;
+        }
+
+        return true;
+    }
+</script>
+
+<style>
+
+    body{
+        margin: 0;
+        padding: 0;
+        background-image: url("images/hauptbild.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh; /* 100% viewport height */
+        width: 100vw; /* 100% viewport width */
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+        width: 300px;
+    }
+
+    .form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    label {
+        margin-bottom: 8px;
+        color: #3498db; /* Blau für die Label-Farbe */
+    }
+
+    input {
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #3498db; /* Blau für den Rahmen */
+        border-radius: 5px;
+    }
+
+    input[type="date"] {
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #3498db; /* Blau für den Rahmen */
+        border-radius: 5px;
+    }
+
+    #link1{
+        display: inline-block;
+        background-color: blueviolet; /* Rotes Orange für den Hintergrund des Links */
+        color: #fff;
+        text-decoration: none;
+        border: none;
+        border-radius: 5px;
+        padding: 12px;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    #link1:hover {
+        background-color: darkviolet; /* Dunkleres Rotes Orange für den Hover-Effekt */
+    }
+
+</style>
+<body>
+
+<div class="container">
+    <form id="myForm" class="form">
+        <label for="vorname">Ime:</label>
+        <input type="text" id="vorname" name="vorname" required>
+
+        <label for="nachname">Prezime:</label>
+        <input type="text" id="nachname" name="nachname" required>
+
+        <label for="geburtsdatum">Datum rodjenja:</label>
+        <input type="date" id="geburtsdatum" name="geburtsdatum" required>
+
+        <a id="link1" href="jahre.html"  onclick="return validateForm()">Poslati</a>
+    </form>
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jahre</title>
+
+
+    <script>
+        function checkLink(linkId) {
+            if (linkId === 'link21' || linkId === 'link22') {
+                alert("Nije ima malo vise");
+            }
+        }
+    </script>
+
+    <style>
+
+        body{
+            margin: 0;
+            padding: 0;
+            background-image: url("images/hauptbild.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            width: 100vw;
+
+            display: flex;
+            justify-content: center;
+
+        }
+
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        .ballons{
+            height: 60px;
+            width: 55px;
+            background-color: crimson;
+            position: absolute;
+            top: 40%;
+            left: 10%;
+            border-radius: 50%;
+            animation: move 2s ease-in infinite;
+        }
+
+        .ballons:before{
+            content: "";
+            height: 60px;
+            width: 6px;
+            position: absolute;
+            background-color: white;
+            top: 93%;
+            left: 40%;
+        }
+
+        .ballons::after{
+            position: absolute;
+            content: '';
+            border-bottom: 12px solid crimson;
+            border-left: 10px solid transparent;
+            border-right: 10px  solid transparent;
+            top: 88%;
+            left: 28%;
+        }
+
+        @keyframes move {
+            0%{
+                top: 100%;
+            }
+            100%{
+                top: 0%;
+            }
+        }
+
+        .ballons:nth-child(2){
+            left: 20%;
+            top: 40%;
+            background-color: yellow;
+            animation-duration: 3s;
+        }
+
+        .ballons:nth-child(2)::after{
+            position: absolute;
+            content: '';
+            border-bottom: 12px solid yellow;
+            border-left: 10px solid transparent;
+            border-right: 10px  solid transparent;
+            top: 88%;
+            left: 28%;
+        }
+
+        .ballons:nth-child(3){
+            left: 30%;
+            top: 40%;
+            background-color: violet;
+            animation-duration: 4s;
+        }
+
+        .ballons:nth-child(3)::after{
+            position: absolute;
+            content: '';
+            border-bottom: 12px solid violet;
+            border-left: 10px solid transparent;
+            border-right: 10px  solid transparent;
+            top: 88%;
+            left: 28%;
+        }
+
+        .ballons:nth-child(4){
+            left: 40%;
+            top: 40%;
+            background-color: crimson;
+            animation-duration: 5s;
+        }
+
+        .ballons:nth-child(4)::after{
+            position: absolute;
+            content: '';
+            border-bottom: 12px solid crimson;
+            border-left: 10px solid transparent;
+            border-right: 10px  solid transparent;
+            top: 88%;
+            left: 28%;
+        }
+
+        .ballons:nth-child(5){
+            left: 50%;
+            top: 40%;
+            background-color: pink;
+            animation-duration: 6s;
+        }
+
+        .ballons:nth-child(5)::after{
+            position: absolute;
+            content: '';
+            border-bottom: 12px solid pink;
+            border-left: 10px solid transparent;
+            border-right: 10px  solid transparent;
+            top: 88%;
+            left: 28%;
+        }
+
+        .ballons:nth-child(6){
+            left: 60%;
+            top: 40%;
+            background-color: orange;
+            animation-duration: 2s;
+        }
+
+        .ballons:nth-child(6)::after{
+            position: absolute;
+            content: '';
+            border-bottom: 12px solid orange;
+            border-left: 10px solid transparent;
+            border-right: 10px  solid transparent;
+            top: 88%;
+            left: 28%;
+        }
+
+        .ballons:nth-child(7){
+            left: 70%;
+            top: 40%;
+            background-color: yellow;
+            animation-duration: 7s;
+        }
+
+        .ballons:nth-child(7)::after{
+            position: absolute;
+            content: '';
+            border-bottom: 12px solid yellow;
+            border-left: 10px solid transparent;
+            border-right: 10px  solid transparent;
+            top: 88%;
+            left: 28%;
+        }
+
+        .ballons:nth-child(8){
+            left: 80%;
+            top: 40%;
+            background-color: blue;
+            animation-duration: 3s;
+        }
+
+        .ballons:nth-child(8)::after{
+            position: absolute;
+            content: '';
+            border-bottom: 12px solid blue;
+            border-left: 10px solid transparent;
+            border-right: 10px  solid transparent;
+            top: 88%;
+            left: 28%;
+        }
+
+        .ballons:nth-child(9){
+            left: 90%;
+            top: 40%;
+            background-color: crimson;
+            animation-duration: 4s;
+        }
+
+        .ballons:nth-child(9)::after{
+            position: absolute;
+            content: '';
+            border-bottom: 12px solid crimson;
+            border-left: 10px solid transparent;
+            border-right: 10px  solid transparent;
+            top: 88%;
+            left: 28%;
+        }
+
+        #link21 {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: crimson; /* Hintergrundfarbe ändern */
+            color: white; /* Textfarbe ändern */
+            text-decoration: none;
+            font-size: 20px; /* Schriftgröße ändern */
+            border-radius: 5px; /* Abgerundete Ecken hinzufügen */
+            transition: background-color 0.3s ease; /* Fließende Übergänge hinzufügen */
+            position: absolute;
+            margin-top: 320px;
+            margin-left: -700px;
+            font-family: Franklin Gothic Heavy;
+            font-size: 300%;
+        }
+
+        #link21:hover {
+            background-color: firebrick; /* Hintergrundfarbe ändern, wenn der Mauszeiger darüber schwebt */
+        }
+
+
+        #link22 {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: blueviolet; /* Hintergrundfarbe ändern */
+            color: white; /* Textfarbe ändern */
+            text-decoration: none;
+            font-size: 20px; /* Schriftgröße ändern */
+            border-radius: 5px; /* Abgerundete Ecken hinzufügen */
+            transition: background-color 0.3s ease; /* Fließende Übergänge hinzufügen */
+            position: absolute;
+            margin-top: 320px;
+            font-family: Franklin Gothic Heavy;
+            font-size: 300%;
+        }
+
+        #link22:hover {
+            background-color: darkviolet; /* Hintergrundfarbe ändern, wenn der Mauszeiger darüber schwebt */
+        }
+
+
+        #link23{
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #3498db; /* Hintergrundfarbe ändern */
+            color: white; /* Textfarbe ändern */
+            text-decoration: none;
+            font-size: 20px; /* Schriftgröße ändern */
+            border-radius: 5px; /* Abgerundete Ecken hinzufügen */
+            transition: background-color 0.3s ease; /* Fließende Übergänge hinzufügen */
+            position: absolute;
+            margin-top: 320px;
+            margin-left: 700px;
+            font-family: Franklin Gothic Heavy;
+            font-size: 300%;
+        }
+
+        #link23:hover {
+            background-color: #2980b9; /* Hintergrundfarbe ändern, wenn der Mauszeiger darüber schwebt */
+        }
+
+        h1{
+            margin-top: 120px;
+            font-size: 340%;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+
+<h1>Klikni ko je tacno</h1>
+
+<div class="ballons"> </div>
+<div class="ballons"> </div>
+<div class="ballons"> </div>
+<div class="ballons"> </div>
+<div class="ballons"> </div>
+<div class="ballons"> </div>
+<div class="ballons"> </div>
+<div class="ballons"> </div>
+<div class="ballons"> </div>
+
+
+<a id="link21"  onclick="checkLink('link21')">18</a>
+
+<a id="link22" onclick="checkLink('link22')">36</a>
+
+<a id="link23" href="Hauptseite.html">56</a>
+
+
+</body>
+</html>
+
